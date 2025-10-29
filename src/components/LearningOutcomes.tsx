@@ -3,23 +3,23 @@ import { Lightbulb, MessageSquare, TrendingUp, Globe } from "lucide-react";
 const outcomes = [
   {
     icon: Lightbulb,
-    title: "Think Like CEOs",
-    description: "From Disney to MrBeast",
+    title: "Meet Live Animals",
+    description: "Snakes, salamanders & geckos",
   },
   {
     icon: MessageSquare,
-    title: "Build & Pitch",
-    description: "Create logos and products",
+    title: "Share & Discover",
+    description: "Stories and observations",
   },
   {
     icon: TrendingUp,
-    title: "Business Basics",
-    description: "Profit, pricing, marketing",
+    title: "Science Basics",
+    description: "Reptiles vs. amphibians",
   },
   {
     icon: Globe,
-    title: "Future Leaders",
-    description: "Confidence and teamwork",
+    title: "World Explorers",
+    description: "Species from around globe",
   },
 ];
 
@@ -29,7 +29,7 @@ const LearningOutcomes = () => {
       <div className="container max-w-5xl mx-auto">
         <div className="text-center mb-8 fade-in-up">
           <h2 className="text-2xl md:text-3xl font-bold">
-            What Kids Learn
+            What Young Explorers Learn
           </h2>
         </div>
         

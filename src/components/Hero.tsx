@@ -38,11 +38,11 @@ const Hero = ({ onEnrollClick }: HeroProps) => {
           {/* Left content */}
           <div className="text-center md:text-left space-y-4 md:space-y-6 fade-in-up">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Mini Business Series
+              Into the Wild: Exploring Reptiles and Amphibians
             </h1>
             
             <p className="text-base md:text-xl text-muted-foreground leading-relaxed">
-              Weekly business adventures for kids ages 8-13. From Disney to MrBeast, kids explore how ideas grow into empires.
+              Weekly herpetology adventures for young explorers. Meet live animals like Scaly the Corn Snake, Slimy the Tiger Salamander, and Lizzie the Leopard Gecko.
             </p>
             
             <div className="space-y-3 md:space-y-4">
@@ -65,7 +65,7 @@ const Hero = ({ onEnrollClick }: HeroProps) => {
             <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-coral-lg cursor-pointer group" onClick={handlePlayClick}>
               <img 
                 src={videoThumbnail}
-                alt="Video preview: Explore big brands and build your own ideas"
+                alt="Video preview: Meet live reptiles and amphibians in our herpetology class"
                 className="w-full h-auto object-cover"
                 loading="eager"
                 decoding="async"

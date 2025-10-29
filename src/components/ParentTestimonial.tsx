@@ -5,9 +5,9 @@ import { ChevronDown } from "lucide-react";
 const ParentTestimonial = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const shortText = "As a parent with an MBA, I genuinely wish I had something like this growing up. My 9-year-old son dreams of becoming an entrepreneur — he loves watching Shark Tank, setting up lemonade stands, and learning how companies are built. We've tried a few online classes before, but Coral Academy's Mini Business Series truly stands out.";
+  const shortText = "As a parent of a nature-loving 8-year-old, I've been searching for engaging science programs that go beyond worksheets. My daughter has always been fascinated by reptiles — she watches nature documentaries, asks endless questions about snakes and lizards, and loves learning about animals. We've tried a few online classes before, but Into the Wild truly stands out.";
   
-  const fullText = "As a parent with an MBA, I genuinely wish I had something like this growing up. My 9-year-old son dreams of becoming an entrepreneur — he loves watching Shark Tank, setting up lemonade stands, and learning how companies are built. We've tried a few online classes before, but Coral Academy's Mini Business Series truly stands out.\n\nEach week, they explore a real company — from LEGO's bankruptcy turnaround to how founders built their brands. What I love most is that it's not just storytelling — kids get to think, create, and present their ideas. In a recent class on Nike, my son designed his own shoe, decided its USP, and even set a price for it! I was amazed hearing the creative ideas the kids shared.\n\nThe class is engaging, hands-on, and teaches real-world thinking in such a fun way. I often find myself listening in while doing chores because the discussions are genuinely interesting!";
+  const fullText = "As a parent of a nature-loving 8-year-old, I've been searching for engaging science programs that go beyond worksheets. My daughter has always been fascinated by reptiles — she watches nature documentaries, asks endless questions about snakes and lizards, and loves learning about animals. We've tried a few online classes before, but Into the Wild truly stands out.\n\nEach week, they meet a live animal — from Scaly the Corn Snake to Slimy the Tiger Salamander to Lizzie the Leopard Gecko. What I love most is that it's not just watching — kids get to share observations, bring pictures they've taken, and learn what makes reptiles different from amphibians. In a recent class, my daughter came home explaining ectothermic regulation with such excitement!\n\nThe class is engaging, hands-on, and teaches real science in such a fun way. Ms. Amalia shares incredible stories from places like the Komodo Dragon Islands and Madagascar, and the kids love seeing species from around the world. I often find myself listening in because the discussions are genuinely fascinating!";
 
   return (
     <section className="py-12 md:py-16 px-4 bg-background">
@@ -17,7 +17,7 @@ const ParentTestimonial = () => {
         </h2>
         
         <div className="relative">
-          {/* Orange glow animation */}
+          {/* Green glow animation */}
           <div className="absolute inset-0 bg-primary/20 rounded-xl blur-xl animate-pulse" style={{ animationDuration: '3s' }} />
           
           <Card className="relative p-6 md:p-8 shadow-coral-lg">

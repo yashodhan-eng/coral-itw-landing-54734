@@ -17,27 +17,27 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 20%;
 
-    /* Coral Academy Brand Colors */
-    --coral-primary: 14 94% 55%;
+    /* Reptile Theme Brand Colors */
+    --coral-primary: 130 65% 42%;
     --coral-primary-foreground: 0 0% 100%;
     
-    --coral-secondary: 193 100% 85%;
+    --coral-secondary: 85 40% 75%;
     --coral-secondary-foreground: 0 0% 20%;
     
-    --coral-accent: 14 94% 55%;
-    --coral-accent-light: 14 94% 90%;
+    --coral-accent: 130 65% 42%;
+    --coral-accent-light: 130 50% 85%;
     --coral-accent-foreground: 0 0% 20%;
 
-    --primary: 14 94% 55%;
+    --primary: 130 65% 42%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 193 100% 85%;
+    --secondary: 85 40% 75%;
     --secondary-foreground: 0 0% 20%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 14 94% 55%;
+    --accent: 130 65% 42%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -45,13 +45,13 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 14 94% 55%;
+    --ring: 130 65% 42%;
 
     --radius: 1rem;
     
     /* Custom shadows */
-    --coral-shadow: 0 4px 20px rgba(240, 90, 38, 0.15);
-    --coral-shadow-lg: 0 8px 30px rgba(240, 90, 38, 0.2);
+    --coral-shadow: 0 4px 20px rgba(52, 168, 83, 0.15);
+    --coral-shadow-lg: 0 8px 30px rgba(52, 168, 83, 0.2);
 
     --sidebar-background: 0 0% 98%;
 
