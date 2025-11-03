@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const testimonials = [
   {
@@ -25,10 +26,36 @@ const testimonials = [
 ];
 
 const TestimonialCarousel = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (!scrollContainer) return;
+
+    let scrollInterval: NodeJS.Timeout;
+    let currentIndex = 0;
+    const cardWidth = 304; // 280px width + 24px gap
+
+    const autoScroll = () => {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      scrollContainer.scrollTo({
+        left: currentIndex * cardWidth,
+        behavior: 'smooth'
+      });
+    };
+
+    scrollInterval = setInterval(autoScroll, 3000);
+
+    return () => clearInterval(scrollInterval);
+  }, []);
+
   return (
     <section className="py-4 px-4 overflow-hidden">
       <div className="container max-w-6xl mx-auto">
-        <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+        <div 
+          ref={scrollContainerRef}
+          className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+        >
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
