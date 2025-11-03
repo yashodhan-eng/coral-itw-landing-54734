@@ -20,9 +20,9 @@ const StatsSection = () => {
   return (
     <section className="py-4 px-4">
       <div className="container max-w-4xl mx-auto">
-        <div className="grid grid-cols-3 gap-6 md:gap-12">
+        <div className="grid grid-cols-3 gap-0 divide-x divide-border">
           {stats.map((stat) => (
-            <div key={stat.id} className="flex flex-col items-center justify-center text-center">
+            <div key={stat.id} className="flex flex-col items-center justify-center text-center px-4 md:px-8">
               <p className="text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-1 whitespace-nowrap">
                 {stat.value}
               </p>
