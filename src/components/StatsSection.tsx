@@ -18,26 +18,21 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="py-12 md:py-16 px-4">
+    <section className="py-8 px-4 bg-muted/30">
       <div className="container max-w-6xl mx-auto">
-        <div className="flex items-center justify-center gap-8 md:gap-12 lg:gap-16">
-          {stats.map((stat, index) => (
-            <>
-              <div 
-                key={stat.id} 
-                className="flex flex-col items-center justify-center text-center py-4 md:py-6 px-4 md:px-8"
-              >
-                <p className="text-lg md:text-xl lg:text-2xl font-bold text-primary mb-2 whitespace-nowrap">
-                  {stat.value}
-                </p>
-                <p className="text-xs md:text-sm text-muted-foreground whitespace-nowrap">
-                  {stat.label}
-                </p>
-              </div>
-              {index < stats.length - 1 && (
-                <div className="h-10 md:h-12 w-px bg-border/50" />
-              )}
-            </>
+        <div className="flex items-center justify-center gap-12 md:gap-16 lg:gap-20">
+          {stats.map((stat) => (
+            <div 
+              key={stat.id} 
+              className="flex flex-col items-start justify-center"
+            >
+              <p className="text-xl md:text-2xl lg:text-2xl font-semibold text-green-600 mb-0.5 whitespace-nowrap">
+                {stat.value}
+              </p>
+              <p className="text-xs md:text-sm text-muted-foreground/80 whitespace-nowrap">
+                {stat.label}
+              </p>
+            </div>
           ))}
         </div>
       </div>
