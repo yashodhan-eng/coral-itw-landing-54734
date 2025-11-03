@@ -20,7 +20,7 @@ const StatsSection = () => {
   return (
     <section className="py-8 md:py-10 px-4">
       <div className="container max-w-5xl mx-auto">
-        <div className="flex items-center justify-center gap-8 md:gap-16 lg:gap-[98px]">
+        <div className="flex items-center justify-center gap-6 md:gap-10 lg:gap-[58px]">
           {stats.map((stat, index) => (
             <>
               <div 
