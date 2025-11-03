@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import StatsSection from "@/components/StatsSection";
 import LearningOutcomes from "@/components/LearningOutcomes";
-import ParentTestimonial from "@/components/ParentTestimonial";
+import ClassVideo from "@/components/ClassVideo";
 import CTABanner from "@/components/CTABanner";
 import EnrollmentModal from "@/components/EnrollmentModal";
 
@@ -22,7 +22,7 @@ const Index = () => {
       <TestimonialCarousel />
       <StatsSection />
       <LearningOutcomes />
-      <ParentTestimonial />
+      <ClassVideo />
       <CTABanner onEnrollClick={handleEnrollClick} />
       <EnrollmentModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </main>
