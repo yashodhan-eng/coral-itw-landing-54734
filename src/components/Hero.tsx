@@ -14,22 +14,22 @@ const Hero = ({ onEnrollClick }: HeroProps) => {
       <div className="container max-w-3xl mx-auto relative z-10">
         {/* Trustpilot Rating */}
         <div className="flex justify-center mb-4 fade-in">
-          <div className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-card border border-border shadow-sm">
-            <span className="font-semibold text-foreground">Excellent</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-card border border-border shadow-sm">
+            <span className="text-sm font-semibold text-foreground">Excellent</span>
             <div className="flex gap-0.5">
               {[1, 2, 3, 4].map((i) => (
-                <Star key={i} className="w-5 h-5 text-green-600 fill-green-600" />
+                <Star key={i} className="w-4 h-4 text-green-600 fill-green-600" />
               ))}
               {/* Partial star (70% filled for 4.7 rating) */}
-              <div className="relative w-5 h-5">
-                <Star className="w-5 h-5 text-green-600 absolute" />
+              <div className="relative w-4 h-4">
+                <Star className="w-4 h-4 text-green-600 absolute" />
                 <div className="absolute inset-0 overflow-hidden" style={{ width: '70%' }}>
-                  <Star className="w-5 h-5 text-green-600 fill-green-600" />
+                  <Star className="w-4 h-4 text-green-600 fill-green-600" />
                 </div>
               </div>
             </div>
-            <span className="font-semibold text-green-600">4.7/5</span>
-            <span className="font-semibold text-foreground">Trustpilot</span>
+            <span className="text-sm font-semibold text-green-600">4.7/5</span>
+            <span className="text-sm font-semibold text-foreground">Trustpilot</span>
           </div>
         </div>
 
