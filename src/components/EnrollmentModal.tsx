@@ -74,7 +74,7 @@ const EnrollmentModal = ({ open, onOpenChange }: EnrollmentModalProps) => {
           <div className="p-4 sm:p-8">
             <DialogHeader className="mb-3 sm:mb-6">
               <DialogTitle className="text-xl sm:text-2xl font-bold text-center">
-                Enroll For <span className="text-primary">FREE</span>
+                TRY FOR <span className="text-primary">FREE</span>
               </DialogTitle>
               <DialogDescription className="text-center text-xs sm:text-sm">
                 Start your child's business journey today. Hurry, spots are filling up fast!
