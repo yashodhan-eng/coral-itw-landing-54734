@@ -26,10 +26,10 @@ const StatsSection = () => {
               key={stat.id} 
               className="flex flex-col items-center md:items-start justify-center text-center md:text-left"
             >
-              <p className="text-xs md:text-xl lg:text-2xl font-semibold text-green-600 mb-0.5 leading-tight">
+              <p className="text-sm md:text-xl lg:text-2xl font-semibold text-green-600 mb-0.5 leading-tight">
                 {stat.value}
               </p>
-              <p className="text-[9px] md:text-xs lg:text-sm text-muted-foreground/80 leading-tight max-w-[80px] md:max-w-none">
+              <p className="text-[10px] md:text-xs lg:text-sm text-muted-foreground/80 leading-tight max-w-[80px] md:max-w-none">
                 {stat.label}
               </p>
             </div>
