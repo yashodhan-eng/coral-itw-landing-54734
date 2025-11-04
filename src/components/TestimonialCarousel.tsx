@@ -69,7 +69,7 @@ const TestimonialCarousel = () => {
 
     let scrollInterval: NodeJS.Timeout;
     let currentIndex = 0;
-    const cardWidth = 276; // 260px width + 16px gap
+    const cardWidth = 292; // 280px width + 12px gap
 
     const autoScroll = () => {
       currentIndex = (currentIndex + 1) % testimonials.length;
@@ -89,20 +89,20 @@ const TestimonialCarousel = () => {
       <div className="container max-w-6xl mx-auto">
         <div 
           ref={scrollContainerRef}
-          className="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide"
+          className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide"
         >
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="flex-shrink-0 w-[260px] md:w-[300px] snap-center"
+              className="flex-shrink-0 w-[280px] md:w-[340px] snap-center"
             >
-              <div className="bg-card border border-border rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow h-full">
+              <div className="bg-card border border-border rounded-xl p-3 shadow-sm hover:shadow-md transition-shadow">
                 {/* Stars */}
                 <div className="flex gap-0.5 mb-2">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-4 h-4 ${
+                      className={`w-3.5 h-3.5 ${
                         i < Math.floor(testimonial.rating)
                           ? "text-primary fill-primary"
                           : i < testimonial.rating
@@ -114,14 +114,14 @@ const TestimonialCarousel = () => {
                 </div>
 
                 {/* Quote */}
-                <p className="text-foreground text-sm mb-3 leading-relaxed">
+                <p className="text-foreground text-xs mb-2 leading-relaxed text-center">
                   "{testimonial.quote}"
                 </p>
 
                 {/* Author */}
-                <div className="text-sm text-muted-foreground">
-                  <p className="font-semibold text-foreground">— {testimonial.author}</p>
-                  <p>{testimonial.location}</p>
+                <div className="text-xs text-muted-foreground text-center">
+                  <p className="font-medium text-foreground">— {testimonial.author}</p>
+                  <p className="text-[10px]">{testimonial.location}</p>
                 </div>
               </div>
             </div>
