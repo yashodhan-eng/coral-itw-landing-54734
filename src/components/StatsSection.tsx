@@ -1,18 +1,18 @@
 const stats = [
   {
     id: 1,
-    value: "5,000+",
-    label: "Students",
+    value: "100+ years",
+    label: "Teacher experience",
   },
   {
     id: 2,
-    value: "Ranked #1",
-    label: "By Parents",
+    value: "Founded by",
+    label: "stanford alum and a mom",
   },
   {
     id: 3,
-    value: "98%",
-    label: "Satisfaction",
+    value: "1000+",
+    label: "Families love us",
   },
 ];
 
