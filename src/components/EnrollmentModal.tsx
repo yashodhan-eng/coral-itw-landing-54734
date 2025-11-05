@@ -112,7 +112,7 @@ const EnrollmentModal = ({ open, onOpenChange }: EnrollmentModalProps) => {
     }
 
     // Render when modal opens
-    const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'; // Test key
+    const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6Lcnpv4rAAAAAOGN8RszPxz9mpL94Ql4FersrRc7'; // Test key
     
     const renderRecaptcha = () => {
       if (!recaptchaContainerRef.current) {
@@ -227,10 +227,31 @@ const EnrollmentModal = ({ open, onOpenChange }: EnrollmentModalProps) => {
       // Handle success
       toast.success(response.message || 'Registration successful! Redirecting...');
 
-      // Redirect to class page after a short delay
-      setTimeout(() => {
-        window.location.href = "https://www.coralacademy.com/class/scalesandslime-d8a4adf3-941f-4944-b278-378544601ecc";
-      }, 2000);
+      const res = await adCampaignService.signin({
+        email: data.email,
+        recaptchaToken: recaptchaToken,
+      });
+
+      console.log("Sign-in response:", res);
+      const magicLink = res?.magicLink;
+      console.log("magicLink: ",magicLink)
+      if (magicLink) {
+        // Redirect to magic link after short delay to allow user to see success toast
+        setTimeout(() => {
+          window.location.href = magicLink;
+        }, 2000);
+        console.log("...")
+      } else {
+        console.error("No magic link received in sign-in response");
+        toast.error("Failed to get sign-in link. Please check your email manually.");
+        setShowLoader(false);
+        setIsSubmitting(false);
+      }
+
+      // // Redirect to class page after a short delay
+      // setTimeout(() => {
+      //   window.location.href = "https://www.coralacademy.com/class/scalesandslime-d8a4adf3-941f-4944-b278-378544601ecc";
+      // }, 2000);
     } catch (error: any) {
       console.error("API error:", error);
       setIsSubmitting(false);
