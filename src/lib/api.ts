@@ -8,7 +8,7 @@ export interface AdCampaignRegisterRequest {
   source: string;
   referrerId?: string | null;
   how_soon?: string | null;
-  schooling_mode?: string | null;
+  preferred_topics?: string | null;
   landing_variant?: string | null;
   recaptchaToken: string | null;
 }
@@ -49,7 +49,7 @@ export const adCampaignService = {
         source: data.source,
         referrerId: data.referrerId ?? null,
         how_soon: data.how_soon ?? null,
-        schooling_mode: data.schooling_mode ?? null,
+        preferred_topics: data.preferred_topics ?? null,
         landing_variant: data.landing_variant ?? null,
         recaptchaToken: data.recaptchaToken,
         timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
